@@ -66,3 +66,62 @@ Why did you choose this project?
 How does this system help in automation?
 What is the main advantage of using this system?
 Describe the project workflow.
+
+
+
+🏠 Rental Management System PDF Chatbot
+This is a simple PDF-based chatbot for your Rental Management System project.
+It allows you to ask questions directly from your project PDF using a simple Streamlit frontend.
+
+🔹 Features
+
+Uses only your PDF file (no database required)
+Simple search bar + button interface
+Answers come directly from the PDF content
+Built with Streamlit + LangChain + FAISS + HuggingFace embeddings
+Perfect for college project demo & viva
+
+
+rental-pdf-chatbot/
+ ├── app.py                   # Main Python file
+ ├── RentalHub.pdf            # Your project PDF
+ └── README.md                # Project documentation
+
+
+Install required libraries:
+pip install streamlit langchain_community langchain_text_splitters faiss-cpu pypdf huggingface-hub
+
+
+🔹 Example Questions to Ask
+
+What is Rental Management System?
+Purpose of this project
+Modules in the system
+Technology used
+Advantages of the system
+Future enhancements
+
+🔹 Technologies Used
+
+Python – Programming language
+Streamlit – Frontend interface
+LangChain Community – Document processing
+HuggingFace Embeddings – Vector representation of PDF content
+FAISS – Vector database for search
+
+🔹 How It Works
+
+PDF is loaded using PyPDFLoader
+
+Text is split into smaller chunks for better processing
+HuggingFace embeddings convert text into vectors
+FAISS vector store stores chunks for semantic search
+User query is converted to a vector and compared to PDF vectors
+Most relevant text is returned as chatbot answer
+
+🔹 Future Enhancements
+
+Support multiple PDFs
+Add chat history
+Improve UI with HTML/CSS
+Offline mode (no API required)
